@@ -7,6 +7,15 @@
   font-family: 'Inter', sans-serif;
 }
 
+main {
+  width: 88%;
+  margin: 0 auto;
+}
+
+section {
+  margin: 50px 0;
+}
+
 .noto-serif {
   font-family: 'Noto', serif;
 }
@@ -100,7 +109,72 @@ header .banner img {
 }
 
 
+/* our plants section */
+
+.our-plants .heading {
+  text-align: center;
+  font-size: 3.12rem;
+  font-weight: 700;
+}
+
+.our-plants .heading span {
+  color: #E95A08;
+  font-family: 'Noto', serif;
+}
+
+.our-plants > p {
+  margin: 0 auto;
+  max-width: 620px;
+  text-align: center;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+
+.our-plants-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 2rem;
+  margin-top: 50px;
+}
+
+.our-plants-container .flower-cart h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 18px 0 8px;
+  color: #111111;
+}
+
+.our-plants-container .flower-cart h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.our-plants-container .flower-cart button {
+  width: 100%;
+  padding: 13px 0;
+  border: none;
+  background-color: #E95A08;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.our-plants-container .flower-cart img {
+  width: 100%;
+  display: block;
+}
+
+
 @media screen and (max-width:576px) {
+  
+  main {
+    width: 90%;
+  }
 
   header {
     height: auto;
@@ -145,6 +219,22 @@ header .banner img {
   .banner-content p {
     font-size: 14px;
     font-weight: 400;
+  }
+
+  /* our plant section */
+  
+  .our-plants .heading {
+    font-size: 1.5rem;
+  }
+
+  .our-plants > p {
+    font-size: 14px;
+  }
+
+  .our-plants-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+    margin-top: 30px;
   }
 
 }
