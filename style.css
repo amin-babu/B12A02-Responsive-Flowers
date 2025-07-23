@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.noto-serif {
+  font-family: 'Noto', serif;
+}
+
+/* header section style */
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 6%;
+}
+
+header nav .logo {
+  width: 100%;
+  max-width: 135px;
+}
+
+header nav .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+header nav .nav-menu .cart,
+nav .mobile-cart {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #000000;
+}
+
+nav .mobile-cart {
+  display: none;
+}
+
+header nav .nav-menu li a {
+  text-decoration: none;
+  color: #8987A1;
+  font-size: 18px;
+}
+
+header nav .nav-menu li:first-child a {
+  color: #252432;
+  font-weight: 700;
+}
+
+
+@media screen and (max-width:576px) {
+
+  header nav {
+    padding: 20px 5%;
+  }
+
+  header nav .nav-menu {
+    display: none;
+  }
+
+  nav .mobile-cart {
+    display: flex;
+  }
+
+  header nav .logo {
+    max-width: 64px;
+  }
+
+}
