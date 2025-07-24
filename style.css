@@ -199,6 +199,17 @@ header .banner img {
   top: -120px;
   right: -100px;
   width: 100%;
+  animation: trusted-badge infinite linear forwards 20s;
+}
+
+@keyframes trusted-badge {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .plant-lovers-image .flower-img-main {
@@ -230,7 +241,8 @@ header .banner img {
   gap: 1rem;
 }
 
-.bloom-ana .bloom-plant, .bloom-ana .ana-plant {
+.bloom-ana .bloom-plant,
+.bloom-ana .ana-plant {
   height: 50%;
   width: 100%;
   display: flex;
@@ -261,20 +273,22 @@ header .banner img {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url('./assets/deal-zabo.png');
+    url('./assets/deal-zabo.png');
   border-radius: 14px;
   background-position: center;
   background-size: cover;
 }
 
-.bloom-plant h5, .ana-plant h5 {
+.bloom-plant h5,
+.ana-plant h5 {
   color: #ffffff;
   font-family: 'Noto', serif;
   font-size: 1.25rem;
   font-weight: 700;
 }
 
-.bloom-plant a, .ana-plant a {
+.bloom-plant a,
+.ana-plant a {
   color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
@@ -323,7 +337,8 @@ header .banner img {
   margin-top: 1rem;
 }
 
-.form form input, .form form button {
+.form form input,
+.form form button {
   display: block;
 }
 
