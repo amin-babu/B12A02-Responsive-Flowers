@@ -8,7 +8,7 @@
 }
 
 main {
-  width: 88%;
+  max-width: 88%;
   margin: 0 auto;
 }
 
@@ -18,6 +18,26 @@ section {
 
 .noto-serif {
   font-family: 'Noto', serif;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3.12rem;
+  font-weight: 700;
+}
+
+.heading span {
+  color: #E95A08;
+  font-family: 'Noto', serif;
+}
+
+.para-primary {
+  margin: 0 auto;
+  max-width: 620px;
+  text-align: center;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
 }
 
 /* header section style */
@@ -111,26 +131,6 @@ header .banner img {
 
 /* our plants section */
 
-.our-plants .heading {
-  text-align: center;
-  font-size: 3.12rem;
-  font-weight: 700;
-}
-
-.our-plants .heading span {
-  color: #E95A08;
-  font-family: 'Noto', serif;
-}
-
-.our-plants > p {
-  margin: 0 auto;
-  max-width: 620px;
-  text-align: center;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.5);
-  margin-top: 10px;
-}
-
 .our-plants-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -175,7 +175,7 @@ header .banner img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
   margin: 200px 0 100px;
 }
 
@@ -186,6 +186,10 @@ header .banner img {
 
 .plant-lovers-image {
   position: relative;
+  background-image: url('./assets/flower-store.png');
+  height: 600px;
+  background-position: center;
+  background-size: cover;
 }
 
 .plant-lovers-image .trust-badge {
@@ -210,10 +214,91 @@ header .banner img {
   list-style-position: outside;
 }
 
+/* latest deal styles */
+
+.latest-deal-container {
+  display: flex;
+  height: 70vh;
+  margin-top: 50px;
+  gap: 1rem;
+}
+
+.bloom-ana {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bloom-ana .bloom-plant, .bloom-ana .ana-plant {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 14px;
+}
+
+.bloom-ana .bloom-plant {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/deal-bloom.png');
+}
+
+.bloom-ana .ana-plant {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/deal-ana.png');
+}
+
+.zambo {
+  flex: 1 1 70%;
+}
+
+.zambo .zambo-plant {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('./assets/deal-zabo.png');
+  border-radius: 14px;
+  background-position: center;
+  background-size: cover;
+}
+
+.bloom-plant h5, .ana-plant h5 {
+  color: #ffffff;
+  font-family: 'Noto', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.bloom-plant a, .ana-plant a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.zambo-plant h5 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-family: 'Noto', serif;
+  font-weight: 700;
+}
+
+.zambo-plant a {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
 @media screen and (max-width:576px) {
-  
+
   main {
-    width: 90%;
+    max-width: 90%;
   }
 
   section {
@@ -256,7 +341,9 @@ header .banner img {
     line-height: 1.3;
   }
 
-  .banner-image, .banner-content, header .banner {
+  .banner-image,
+  .banner-content,
+  header .banner {
     flex: 1;
   }
 
@@ -266,12 +353,12 @@ header .banner img {
   }
 
   /* our plant section */
-  
-  .our-plants .heading {
+
+  .heading {
     font-size: 1.5rem;
   }
 
-  .our-plants > p {
+  .para-primary {
     font-size: 14px;
   }
 
@@ -290,6 +377,7 @@ header .banner img {
   .plant-lovers {
     grid-template-columns: 1fr;
     margin: 40px 0;
+    gap: 3rem;
   }
 
   .plant-lovers-content h3 {
@@ -298,5 +386,38 @@ header .banner img {
 
   .plant-lovers-content ul li {
     font-size: 14px;
+  }
+
+  .plant-lovers-image {
+    height: 500px;
+    background-size: cover;
+  }
+
+  /* latest deal section */
+
+  .latest-deal-container {
+    flex-direction: column;
+    height: 75vh;
+  }
+
+  .bloom-ana {
+    flex: 1 1 67%;
+  }
+
+  .zambo {
+    flex: 1 1 33%;
+  }
+
+  .zambo-plant h5 {
+    font-size: 1.25rem;
+  }
+
+  .zambo-plant a {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+
+  .bloom-ana .ana-plant {
+    border-radius: 0;
   }
 }
