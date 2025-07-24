@@ -7,13 +7,14 @@
   font-family: 'Inter', sans-serif;
 }
 
-main {
+/* main {
   max-width: 88%;
   margin: 0 auto;
-}
+} */
 
 section {
   margin: 100px 0;
+  padding: 0 6%;
 }
 
 .noto-serif {
@@ -201,8 +202,7 @@ header .banner img {
 }
 
 .plant-lovers-image .flower-img-main {
-  width: 100%;
-  max-width: 540px;
+  display: none;
 }
 
 .plant-lovers-content ul li {
@@ -295,14 +295,65 @@ header .banner img {
   margin-top: 10px;
 }
 
+/* Form Section */
+
+.form {
+  padding: 180px 0;
+  background-image: url('./assets/news-letter-bg.png');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form .form-headline {
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.form form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.form form input, .form form button {
+  display: block;
+}
+
+.form form input {
+  padding: 12px 0 12px 18px;
+  width: 100%;
+  max-width: 644px;
+  border: none;
+}
+
+.form form input:focus {
+  outline: none;
+}
+
+.form form button {
+  padding: 12px 40px;
+  border: none;
+  background-color: #E95A08;
+  color: #ffffff;
+  font-weight: 600;
+}
+
 @media screen and (max-width:576px) {
 
-  main {
+  /* main {
     max-width: 90%;
-  }
+  } */
 
   section {
     margin: 40px 0;
+    padding: 0 5%;
   }
 
   header {
@@ -364,7 +415,7 @@ header .banner img {
 
   .our-plants-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.3rem;
+    gap: 1.1rem;
     margin-top: 30px;
   }
 
@@ -377,7 +428,7 @@ header .banner img {
   .plant-lovers {
     grid-template-columns: 1fr;
     margin: 40px 0;
-    gap: 3rem;
+    gap: 1rem;
   }
 
   .plant-lovers-content h3 {
@@ -389,8 +440,13 @@ header .banner img {
   }
 
   .plant-lovers-image {
-    height: 500px;
-    background-size: cover;
+    height: auto;
+    background-image: none;
+  }
+
+  .plant-lovers-image .flower-img-main {
+    display: block;
+    width: 100%;
   }
 
   /* latest deal section */
@@ -419,5 +475,23 @@ header .banner img {
 
   .bloom-ana .ana-plant {
     border-radius: 0;
+  }
+
+  /* form section style */
+
+  .form .form-headline {
+    font-size: 1.25rem;
+  }
+
+  .form form input {
+    width: auto;
+  }
+
+  .form form button {
+    padding: 12px 30px;
+  }
+
+  .form {
+    padding: 100px 0 60px;
   }
 }
